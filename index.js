@@ -1,4 +1,4 @@
-function purchaseBook(book, discountPercentage, taxPercentage, stock, amountPurchased) {
+function purchaseBook(book, discountPercentage, taxPercentage, stock, amountPurchased, term) {
   // Check if book is out of stock
   if (stock === 0) {
     console.log(`Sorry, ${book.title} is out of stock.`);
@@ -25,13 +25,20 @@ function purchaseBook(book, discountPercentage, taxPercentage, stock, amountPurc
 
   // Update stock and total price
   let totalPrice = 0;
-  for (let i = 1; i <= amountPurchased; i++) {
+  let creditPrice = priceAfterTax / term.length;
+  let creditArray = [];
+
+  for (let i = 0; i < term.length; i++) {
     if (stock === 0) {
       console.log(`Sorry, ${book.title} is now out of stock.`);
       break;
     }
     stock--;
-    totalPrice += priceAfterTax;
+    totalPrice += creditPrice;
+    creditArray.push({
+      month: i + 1,
+      price: creditPrice.toFixed(2)
+    });
   }
 
   // Display all the parameters with additional data
@@ -43,6 +50,10 @@ function purchaseBook(book, discountPercentage, taxPercentage, stock, amountPurc
   console.log(`Price after tax: ${priceAfterTax.toFixed(2)}`);
   console.log(`Amount purchased: ${amountPurchased}`);
   console.log(`Total price: ${totalPrice.toFixed(2)}`);
+
+  // Display the credit price for each term as an array
+  console.log(`Credit price for each term:`);
+  console.table(creditArray);
 
   // Check if there is still stock left for the purchase
   if (stock > 0) {
@@ -58,4 +69,4 @@ const book = {
   price: 10000,
 };
 
-purchaseBook(book, 20, 5, 10, 5);
+purchaseBook(book, 20, 5, 10, 5, [1, 2, 3, 4, 5]); // Example usage with 5 terms of credit
