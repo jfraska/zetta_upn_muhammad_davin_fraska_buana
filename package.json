@@ -1,0 +1,20 @@
+{
+  "name": "zetta_upn_muhammad_davin_fraska_buana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascript_day_2.js",
+  "scripts": {
+    "start" : "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fraska20/zetta_upn_muhammad_davin_fraska_buana.git"
+  },
+  "author": "davin fraska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fraska20/zetta_upn_muhammad_davin_fraska_buana/issues"
+  },
+  "homepage": "https://github.com/fraska20/zetta_upn_muhammad_davin_fraska_buana#readme"
+}
