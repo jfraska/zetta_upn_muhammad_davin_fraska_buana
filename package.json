@@ -2,9 +2,9 @@
   "name": "zetta_upn_muhammad_davin_fraska_buana",
   "version": "1.0.0",
   "description": "",
-  "main": "javascript_day_2.js",
+  "main": "app.js",
   "scripts": {
-    "start" : "node index.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/fraska20/zetta_upn_muhammad_davin_fraska_buana/issues"
   },
-  "homepage": "https://github.com/fraska20/zetta_upn_muhammad_davin_fraska_buana#readme"
+  "homepage": "https://github.com/fraska20/zetta_upn_muhammad_davin_fraska_buana#readme",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
 }
